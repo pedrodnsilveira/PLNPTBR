@@ -1,0 +1,373 @@
+Metodologia e validação para a construção de gatilhos
+motivacionais em sistemas persuasivos computacionais para
+mudança de comportamento
+Fernanda P. Mota1
+, Viviani R. Kwecko1
+, Fernando P. de Tolêdo2
+,
+Sam da S. Devincenzi1
+, Fabiana Z. Ferreira1
+,
+Alessandro de L. Bicho3
+, Silvia S. da C. Botelho3
+1PPG em Educação em Ciências: química da vida e saúde (PPGEC)
+2PPG em Modelagem Computacional (PPGMC)
+3Centro de Ciências Computacionais (C3)
+Universidade Federal do Rio Grande (Furg) – Rio Grande/RS – Brasil
+fernanda.mota@furg.br
+Abstract. The present study proposes a methodology to model motivational triggers through ubiquitous technologies. This triggers can help users to learn new
+behaviors. The model is validated throught a case study focused on the logicalrational use of electric energy resources. The identification of the users’ motivational profile enables the organization of motivational messages that, when
+sent in the right way and at the right time, can enhance the ubiquitous learning
+process that, in this work, is related to environmental education.
+Resumo. O presente trabalho propõe uma metodologia para modelar gatilhos,
+mensagens motivacionais através de tecnologias ubíquas para que o usuário
+aprenda novos comportamentos. Para validar o modelo, desenvolvemos um estudo de caso focado no uso lógico-racional dos recursos de energia elétrica.
+A identificação do perfil motivacional do usuário possibilita a organização de
+mensagens motivacionais que, quando enviadas na forma e no momento adequados, podem potencializar o processo de aprendizagem ubíqua que, neste
+trabalho, está relacionada à educação ambiental.
+1. Introdução
+Atualmente, há diversos dispositivos (notebooks, smartphones, tablets, etc) coletando e
+processando uma quantidade significativa de informações sobre o comportamento dos
+seus usuários. Estas informações podem ser utilizadas na saúde, para a verificação dos sinais vitais [Banerjee and Sheth 2017], na agricultura, para monitoramento da fertilização
+e irrigação em plantações [Sánchez et al. 2016], na educação, para auxílio em metodologias de ensino-aprendizagem [Arendt et al. 2014], etc. Essas tecnologias vêm ganhando
+destaque, sob a terminologia de Computação Ubíqua, sendo definida por [Weiser 1991]
+como a integração da Computação às ações e comportamentos humanos em “qualquer
+momento” e em “qualquer lugar” interagindo de modo imperceptível [Weiser 1991].
+Segundo [Santaella 2014a], a Educação, em particular, é uma área com potencial
+para se beneficiar das possibilidades advindas da tecnologia ubíqua. Contudo, o estudo
+DOI: 10.5753/cbie.sbie.2018.368 368
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+dos efeitos da tecnologia ubíqua sobre o comportamento do usuário e, mais especificamente, sobre como a relação humano-computador pode acionar processos de aprendizagem, se constitui em um amplo campo de pesquisa caracterizado por um elevado grau
+de complexidade metodológica, decorrente da confluência de diversas áreas de investigação, tais como: a psicologia, a computação, a engenharia e a educação. O conceito de
+aprendizagem ubíqua utilizado neste artigo está em acordo com a definição de aprendizagem ubíqua feita por [Santaella 2014b], que a identifica como o processo de aquisição
+de conhecimento que se fundamenta em um tipo de aprendizado aberto, individual ou
+grupal, sendo obtido em quaisquer ocasiões, eventualidades, circunstâncias e contextos.
+A característica marcante desta forma de aprendizagem encontra-se na espontaneidade,
+na curiosidade ou na dúvida ocasional a respeito de alguma informação. Ainda, segundo
+[Santaella 2014b], um processo de aprendizagem ocorre quando algum conhecimento adquirido passa a integrar o repertório comportamental do indivíduo.
+Brian J. Fogg considera que a mudança de comportamento de um indivíduo é determinada pela combinação de três fatores: motivação, habilidade e gatilho, que compõem
+o Fogg Behavior Model (FBM) [Fogg 2002]. Os gatilhos são mensagens motivacionais
+utilizadas para induzir a realização de um comportamento por parte do indivíduo. Portanto, é necessário que o indivíduo tenha habilidade para realizar um comportamento,
+esteja motivado e receba um gatilho no momento adequado para que um comportamento
+ocorra. Porém, o FBM não aborda a metodologia necessária para modelar os gatilhos.
+Neste sentido, propomos o desenvolvimento de uma metodologia para modelar os gatilhos motivacionais a partir do conceito da teoria da autodeterminação, sendo definida
+como um arcabouço (framework) para o estudo da motivação humana [Deci 1987], potencializando, assim, a motivação e o aprendizado de habilidade(s) necessárias para alterar
+o comportamento do indivíduo. A identificação do perfil motivacional deste indivíduo
+possibilita a organização de mensagens motivacionais que, ao serem enviadas, podem
+potencializar o processo de aprendizagem ubíqua que, neste trabalho, está relacionada à
+educação ambiental.
+O trabalho está organizado na seguinte sequência. Na próxima seção detalhamos
+as abordagens teóricas do estudo. Na Seção 3 apresentamos a metodologia para a construção de gatilhos motivacionais. Na Seção 4 discutimos os resultados obtidos. Finalmente,
+na Seção 5 apresentamos as considerações finais e discutimos perspectivas de trabalhos
+futuros.
+2. Fundamentação Teórica
+O modelo Fogg Behavior Model (FBM) [Fogg 2002], considera que a mudança de um
+comportamento é determinada pela combinação de três fatores: motivação, habilidade e
+gatilho. Entretanto, o autor não apresenta uma metodologia formal para avaliar a motivação em seu modelo. Fogg define a motivação em termos quantitativos enquanto a
+Teoria da Autodeterminação (do inglês Self-Determination Theory – STD), consiste de
+uma proposta mais ampla por considerar também fatores qualitativos que podem ser
+mensurados por meio de instrumentos e técnicas que foram definidos na literatura por
+[Deci and Ryan 2008, Deci and Ryan 2000], entre outros. Neste trabalho optou-se pelo
+uso da Teoria da Autodeterminação (SDT) devido a complexidade envolvida na análise da
+motivação dos indivíduos. A Teoria da Autodeterminação (do inglês Self-Determination
+Theory – STD), também conhecida como teoria da motivação, é descrita por [Deci 1987]
+369
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+como um framework para o estudo da motivação humana. A SDT divide a motivação em
+três tipos: motivação intrínseca, extrínseca e falta de motivação, conforme Tabela 1.
+Tabela 1. Nível de autodeterminação ao longo do continuum da autodeterminação (adaptado de [Gagné and Deci 2005]).
+A motivação intrínseca é a realização de uma atividade por si, a fim de experimentar o prazer e satisfação inerentes a ela. A motivação extrínseca refere-se a uma grande
+variedade de ações em que os objetivos se estendem para além dos inerentes à própria
+atividade. A motivação extrínseca pode ser classificada como: regulação integrada, regulação identificada, regulação introjetada e regulação externa, conforme detalhado na
+Tabela 1. A falta de motivação ocorre quando os indivíduos experimentam uma falta de
+conexão entre suas ações e resultados. As ações não são nem intrínseca nem extrinsecamente motivadas, devido ao fato de que o indivíduo não encontra nenhum senso de
+propósito ou expectativa de recompensa ou possibilidade de mudar o curso dos acontecimentos, sendo assim é o tipo de motivação menos autodeterminado. [Deci 1987] afirma
+que os tipos de motivação podem ser ordenados ao longo de um continuum que varia
+entre níveis mais baixos (Falta de Motivação) à níveis mais altos da autodeterminação
+(Motivação Intrínseca).
+Os estudos relacionados a teoria da autodeterminação destacam a utilização de
+tecnologias como meio para influenciar a motivação dos indivíduos. [Wati and Koo 2012,
+Koo and Chung 2014] avaliaram o uso de tecnologia sustentável por meio de instrumentos psicométricos para avaliar o tipo de motivação dos indivíduos ao utilizar sensores para
+mensurar o consumo de energia elétrica. [Firssova et al. 2014] avaliaram os aspectos motivacionais dos indivíduos ao utilizar dispositivos móveis nos processos de aprendizagem
+em sala de aula por meio de questionários. No entanto, a maioria dos estudos que envolvem o conceito de teoria da autodeterminação se concentram em projetar sistemas
+motivacionais e avaliar sua eficácia.
+O gatilho é definido por [Fogg 2002] como recurso (lembretes, mensagens, alertas, notificações) utilizado para induzir o indivíduo a realizar uma ação que é selecionada
+370
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+de acordo com o nível de motivação e habilidade do indivíduo. Os gatilhos podem ser
+divididos em três grupos de acordo com os níveis de motivação e habilidade: (i) spark,
+pouca motivação e alta habilidade para realizar uma atividade; (ii) facilitator, têm alta motivação e pouca habilidade (capacidade de executar um comportamento). O objetivo deste
+gatilho é simplificar (facilitar) a execução de uma ação; (iii) signal, é utilizada quando as
+pessoas têm motivação e a habilidade para realizar uma ação. O gatilho do tipo signal não
+pretende motivar as pessoas ou simplificar sua tarefa, servindo apenas como lembrete, de
+forma a manter os níveis de habilidade e motivação. Sendo assim, essa pesquisa se diferencia das demais ao fornecer um modelo de investigação, que objetiva em seu processo
+final verificar se as mediações de aprendizagem ubíqua nos processos motivacionais dos
+indivíduos são capazes de alterar o seu comportamento. Este estudo tem como objetivo
+o desenvolvimento de um modelo para construção de gatilhos que atuam na mudança de
+motivação do indivíduo para realizar uma atividade específica.
+3. Metodologia para construção de gatilhos motivacionais em sistemas
+persuasivos
+A metodologia proposta neste trabalho pode ser compreendida a partir do fluxograma
+apresentado na Figura 1. A proposta compreende a construção dos gatilhos a partir dos
+seguintes métodos: (i) identificação das palavras e termos importantes relacionados ao
+contexto em que o gatilho será enviado. Nesta etapa é realizada uma entrevista com uma
+amostra de sujeitos, sendo a sua análise feita através do Discurso do Sujeito Coletivo;
+(ii) descrição do gatilho spark em diferentes tipos de motivação, de acordo com a classificação proposta por [Deci and Ryan 2000]: motivação intrínseca, regulação integrada,
+regulação identificada, regulação introjetada, regulação externa e falta de motivação. O
+gatilho é modelado para a aplicação a partir das características definidas pela Teoria da
+Autodeterminação resumidas na Tabela 1, a qual contempla as razões para que um indivíduo exerça um determinado comportamento; por fim, a (iii) validação, um grupo de
+especialistas verifica os termos e os tipos de gatilho com o objetivo de identificar aspectos
+como a clareza, a pertinência entre ambos e a neutralidade das informações das mensagens.
+Figura 1. Fluxograma dos métodos para descrição da metodologia para a construção de gatilhos motivacionais.
+No presente trabalho, a metodologia proposta foi modelada para um estudo de
+caso voltado ao uso lógico-racional de recursos da energia elétrica residencial. Foram
+abordados os seguintes temas relacionados ao estudo de caso: (a) sobre a rotina do indivíduo: auto-percepção e hábitos de consumo; (b) sobre o comportamento de consumo
+conforme o local: residencial e no trabalho; (c) sobre motivações e desafios para a redução
+371
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+do consumo de energia; (d) sobre conceitos de sustentabilidade: perceber, situar e fundamentar o indivíduo; (d) sobre conhecer os desafios em relação à redução do consumo
+energético.
+Para a identificação dos principais temas a serem inseridos nos gatilhos, realizamos entrevistas com o objetivo de obter extratos de depoimento na realidade brasileira e
+na espanhola. As entrevistas ocorreram no período de 05 de julho de 2017 a 10 de julho
+de 2017, na Espanha, e no período de 21 de novembro de 2017 a 04 de dezembro de 2017,
+no Brasil. A amostra brasileira foi composta por 13 (treze) indivíduos, sendo 8 (oito) professores e 5 (cinco) estudantes, com idades entre 25 e 40 anos, todos membros de uma
+instituição de ensino superior. A amostra espanhola foi composta por 8 (oito) indivíduos,
+sendo 3 (três) professores e 5 (cinco) estudantes, com idades entre 23 e 51 anos, também
+membros de uma instituição de ensino superior.
+Construímos um conjunto de 36 gatilhos, divididos igualmente pelos diferentes
+tipos classificados por [Deci and Ryan 2000]. Estes gatilhos foram avaliados por especialistas brasileiros e espanhóis das áreas da Educação, da Psicologia Comportamental, da
+Computação e da Sociologia, com o intuito de identificar possíveis problemas quanto aos
+seguintes fatores: (i) clareza do texto do gatilho; (ii) pertinência da mensagem com os
+conceitos dos tipos de motivação; e (iii) neutralidade da informação da mensagem. Participaram desta etapa 7 (sete) especialistas do Brasil, sendo 2 (duas) mulheres e 5 (cinco)
+homens, com idades entre 25 e 54 anos, e na Espanha foram 7 (sete) especialistas, sendo
+4 (quatro) mulheres e 3 (três) homens, com idades entre 22 e 51 anos. Esta avaliação
+foi feita por meio de uma escala Likert de cinco pontos, sendo o de valor 1 (um) considerando que discorda totalmente, e 5 (cinco) considerando que concorda totalmente. O
+objetivo em realizar o estudo no Brasil e na Espanha foi avaliar possíveis semelhanças ou
+diferenças entre os tipos de motivação e comportamentos sustentáveis.
+De modo a termos um ambiente controlável, no qual as únicas variáveis sejam
+as que se referem aos gatilhos descritos por mensagens motivacionais, optamos por não
+reproduzi-los em interface. O envio dos gatilhos foi realizado por e-mail para uma amostra de 50 (cinquenta) brasileiros e 50 (cinquenta) espanhóis, sendo professores e estudantes de instituições de nível superior brasileira e espanhola. No entanto, apenas 20 (vinte)
+brasileiros, sendo 15 (quinze) homens e 5 (cinco) mulheres, com idades entre 19 e 47
+anos, e 36 (trinta e seis) espanhóis, sendo 22 (vinte e dois) homens e 14 (quatorze) mulheres, com idades entre 19 e 57 anos, responderam à pesquisa. Após a análise do tipo
+de motivação, enviamos um grupo de gatilhos adequados à motivação expressa previamente por cada indivíduo, solicitando que o mesmo indicasse em uma escala Likert de
+cinco pontos, sendo 1 (um) considerando que não gostou, e 5 (cinco) considerando que
+gostou muito, sua avaliação quanto ao gatilho. Foram calculadas a média e o desvio padrão de cada mensagem de cada grupo para verificar os gatilhos que obtiveram melhor
+avaliação. Ainda, para auxiliar na análise dos gatilhos na amostra, desenvolvemos um
+instrumento para avaliar a relação entre a motivação e os gatilhos, de modo a observar
+quais são os que melhor se relacionam para cada tipo de motivação, acrescentando maior
+probabilidade de serem escolhidos. As mensagens que obtiverem maior peso são as que
+foram mais aceitas pelas pessoas na amostra. Para a análise do tipo de motivação utilizamos um instrumento proposto pela literatura, denominado Situational Motivation Scale
+(SIMS) [Guay et al. 2000], que identifica o tipo de motivação em uma atividade.
+372
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+A análise dos gatilhos tem o propósito de conhecer e descrever as mensagens
+que representam os perfis de comportamento dos consumidores de energia elétrica, bem
+como identificar mensagens motivacionais que possibilitem tornar o comportamento mais
+sustentável. Os gatilhos motivacionais, em seu processo final, serão inseridos em uma interface para avaliar a mudança de comportamento dos indivíduos a partir da intervenção
+em suas motivações sobre sustentabilidade, verificando se mediações de aprendizagem
+ubíqua em processos motivacionais dos indivíduos são capazes de alterar o seu comportamento, tornando-o mais sustentável.
+4. Resultados e discussões
+A metodologia para desenvolvimento do modelo de construção de gatilhos motivacionais
+foi avaliada em quatro etapas: (i) aplicação de entrevistas para avaliar as palavras e termos
+relacionados ao consumo de energia elétrica; (ii) desenvolvimento dos gatilhos a partir
+da teoria da autodeterminação; (iii) análise do texto dos gatilhos por especialistas; (iv)
+aplicação dos gatilhos em amostra controlada.
+4.1. Aplicação de entrevistas para identificar as palavras e termos relacionados ao
+consumo de energia elétrica
+Nesta etapa identificamos uma maior preocupação em justificar o consumo de energia elétrica, do que reduzir ou tornar mais eficiente o comportamento do consumidor de energia.
+Também foi possível observar que essa angústia encontra-se diretamente relacionada ao
+valor e as taxas de consumo, bem como a informações impressas sobre o custo na conta
+de luz. Quanto ao uso de equipamentos e sua relação com o consumo, os espanhóis relataram uma preocupação com a eficiência energética, enquanto os brasileiros têm maior
+atenção com o seu conforto.
+Os brasileiros apresentaram maior preocupação com a sustentabilidade relacionada ao impacto em seu conforto e ao uso dos equipamentos, do que efetivamente com a
+importância em ter um comportamento ambiental sustentável. [Shaikh et al. 2014] afirma
+que essa valorização do conforto aumentou as preocupações com o suprimento de energia,
+ao rápido esgotamento dos recursos energéticos, ao aumento das demandas por serviços
+e à melhoria dos estilos de vida; consequentemente, tem sido apresentado uma demanda
+crescente de energia em um futuro próximo. No discurso dos espanhóis ficou evidenciado uma inversão destes valores sociais, demonstrando maior preocupação com a eficiência energética dos equipamentos, que corrobora com as afirmações apresentadas por
+[Shaikh et al. 2014]. Outro fator presente nos discursos é a necessidade de uma maior
+clareza quanto às informações relativas ao consumo de energia. Porém, para que essa
+informação atinja uma mudança de comportamento do consumidor é necessário que a
+mesma seja personalizada. Atualmente, os aparatos tecnológicos permitem o envio de
+informações por meio de recursos capazes de induzir o indivíduo a realizar determinada
+atividade, seja por lembretes, mensagens, alertas ou notificações. Entretanto, tais mensagens devem estar de acordo com o nível de motivação e habilidade de cada pessoa.
+[Jackson 2005] afirma que o aumento na exposição do indivíduo à informação
+sobre o consumo pode aumentar a conscientização e conhecimento, resultando em mudanças no comportamento. Podemos perceber que apesar dessa distinção de foco dos
+indivíduos, há uma necessidade de constituir processos de aprendizagem capazes de tornar a ubiquidade um recurso de conscientização para a sustentabilidade. A característica
+373
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+marcante desta forma de aprendizagem encontra-se na espontaneidade, na curiosidade
+ocasional ou na dúvida a respeito de alguma informação. [Santaella 2014a] afirma que
+um processo de aprendizagem ubíqua ocorre quando algum conhecimento é adquirido e
+passa a integrar o repertório comportamental do indivíduo. Neste sentido, a avaliação
+da aprendizagem ubíqua deve ser realizada através de situações concretas nas quais o
+indivíduo possa manifestar os repertórios comportamentais adquiridos.
+4.2. Desenvolvimento dos gatilhos a partir da teoria da autodeterminação
+Após a análise dos discursos, foram selecionadas expressões representativas dos discursos em relação ao consumo de energia elétrica. A partir delas foram construídas os 36
+gatilhos. Na Tabela 2 são apresentados alguns exemplos das mensagens construídas para
+cada tipo de motivação.
+Tabela 2. Exemplos de mensagens dos gatilhos conforme o tipo de motivação.
+Tipo de Motivação Mensagem
+Intrínseca Você está fazendo um ótimo trabalho ao desligar a luz.
+Reg. Integrada Ao desligar o computador, você continuará reduzindo o consumo de
+energia elétrica.
+Reg. identificada Desligue o equipamento e reduza seu consumo de energia elétrica em
+20%.
+Reg. Introjetada Você deve proporcionar um ambiente mais sustentável para a próxima
+geração. Por isso, desligue seu equipamento ao sair do ambiente.
+Reg. Externa Você deve contribuir com o futuro do seu planeta. Por isso, desligue seu
+equipamento ao sair do ambiente.
+Falta de Motivação Você economizará 10% ao mês se desligar o equipamento quando sair
+do ambiente.
+4.3. Análise dos gatilhos feita por especialistas
+A Tabela 3 sintetiza a análise realizada pelos especialistas. A seguir destacamos alguns
+pontos da análise.
+Tabela 3. Média µ e Desvio Padrão σ por item da análise dos gatilhos feita por especialistas do Brasil e da Espanha. As abreviaturas têm o seguinte significado:
+TM - Tipo de Motivação, MI - Motivação Intrínseca, RI - Regulação Integrada, RId -
+Regulação Identificada, RIo - Regulação Introjetada, RE - Regulação Externa, FM
+- Falta de Motivação, Es - Espanha, Br - Brasil.
+TM
+Clareza Pertinência Neutralidade
+Es Br Es Br Es Br
+µ σ µ σ µ σ µ σ µ σ µ σ
+MI 3,9 1,2 4,3 1,0 3,7 1,1 3,9 1,6 4,0 1,1 4,3 1,2
+RI 3,5 1,2 3,8 1,5 3,4 1,2 3,4 1,6 3,6 1,2 3,7 1,6
+RId 3,7 1,4 4,6 0,7 3,8 1,1 3,8 1,7 4,3 0,9 4,6 0,9
+RIo 4,0 1,4 4,4 0,9 3,4 1,5 3,6 1,7 4,0 1,3 4,3 1,2
+RE 4,1 1,3 4,2 1,3 4,3 1,1 4,1 1,4 - - -
+FM 4,1 1,3 4,2 1,5 3,9 1,3 4,3 1,4 - - -
+O gatilho em espanhol que obteve o maior valor médio com relação à clareza foi
+“Debes promover un ambiente más saludable para la futura generación. Apaga el equipo
+al salir de la habitación.”, do tipo Regulação Introjetada. Por outro lado, o menor valor
+374
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+médio em clareza foi a mensagem “El televisor está encendido! Desactive la distancia
+con un simple toque y salve un árbol.”, do tipo Regulação Identificada.
+O gatilho em português que obteve o maior valor médio com relação à clareza
+foi “Você desligou seu equipamento oito vezes este mês! Não esqueça de desligá-lo novamente.”, do tipo Regulação Identificada. Por outro lado, o menor valor médio foi a
+mensagem “Mantenha seu consumo reduzido e contribua para a redução de energia de
+sua região.”, do tipo Regulação Integrada.
+O gatilho em espanhol que obteve o menor valor médio com relação à pertinência
+foi “Sigue reduciendo el consumo y no contribuyas al gasto energético en tu área.”, do
+tipo Regulação Integrada. Por outro lado, o maior valor médio foi “Tienes que apagar el
+equipo para reducir el gasto de tu factura de energía eléctrica”, do tipo Regulação Externa.
+O gatilho em português que obteve o maior valor médio com relação à pertinência
+foi “A Televisão está consumindo 75 Watts. Você pode economizar R$ 3,31 este mês se
+desligá-la.”, do tipo Regulação Externa, e a menor foi “Mantenha seu consumo reduzido
+e contribua para a redução de energia de sua região”, do tipo Regulação Integrada.
+O gatilho em espanhol que obteve o menor valor médio com relação à neutralidade
+foi “Sigue reduciendo el consumo y no contribuyas al gasto energético en tu área.”, do tipo
+Regulação Integrada. Por outro lado, o maior valor médio foi “Apagando el equipo estás
+ahorrando electricidad y pagarás menos a fin de mes.”, do tipo Regulação Identificada.
+O gatilho em português que obteve o maior valor médio com relação à neutralidade foi “70% das pessoas desta casa desligaram a televisão ao sair deste local. Desligue
+você também!”, do tipo regulação introjetada. Por outro lado, a menor média foi “Mantenha seu consumo reduzido e contribua para a redução de energia de sua região.”, do tipo
+regulação integrada.
+4.4. Aplicação dos gatilhos na amostra controlada
+Após a validação pelos especialistas, as mensagens foram enviadas para o grupo de espanhóis e brasileiros com o objetivo de avaliar quais apresentam maiores justificativas
+motivacionais para uma possível mudança de comportamento.
+Dentre as seis mensagens que foram construídas para cada tipo de motivação, os
+espanhóis melhor se identificaram com as seguintes mensagens:
+(i) Motivação Intrínseca, “¡Muy bien! Estás contribuyendo a la reducción del consumo energético del país al apagar tu equipó”; (ii) Regulação Identificada, “Apagando el
+equipo estás ahorrando electricidad y pagarás menos a fin de mes.” e Haz el ambiente
+más saludable, al reducir el consumo de energía también se reducen las emisiones de
+CO2!”; (iii) Falta de Motivação, “Su equipo consume aproximadamente 20,00e al mes.
+Para reducir su consumo y el gasto de la factura de electricidad, desconecte el equipo cuando salga de la habitación. e Se ahorra un 10% al mes si apagas el equipo cuando sales
+de la habitación. ”. (iv) Regulação Integrada, “Apaga el equipo y redujeres el consumo de
+energía.”; (v) Regulação Externa, “Tienes que apagar el equipo para reducir el gasto de
+tu factura de energía eléctrica.” e “Tienes que contribuir al futuro sostenible del planeta,
+apaga el equipo al salir de la habitación.”; (vi) Falta de Motivação “Ahorrarás un 10% al
+mes si apagares el equipo cuando sale del ambiente por medio de un clic en apagar”, “Su
+equipo consume aproximadamente 20,00e al mes. Para reducir su consumo y el gasto
+375
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+de la factura de electricidad, desconecte el equipo cuando salga de la habitación.” e “Se
+ahorra un 10% al mes si apagas el equipo cuando sales de la habitación”.
+Dentre as seis mensagens que foram construídas para cada tipo de motivação, os
+brasileiros melhor se identificaram com as seguintes mensagens:
+(i) Motivação Intrínseca, “Muito Bem! você já desligou a televisão! Não esqueça
+de desligá-la novamente.”; (ii) Regulação Identificada “Ao desligar o equipamento você
+estará economizando energia elétrica e pagará menos no final do mês.”; (iii) Regulação
+Integrada “Continue protegendo o meio ambiente ao desligar o equipamento e reduzir
+o consumo de energia” e “Mantenha seu consumo de energia baixo ao desligar a luz”;
+(iv) Regulação Introjetada, “Continue protegendo o meio ambiente ao desligar o equipamento e reduzir o consumo de energia” e “Mantenha seu consumo de energia baixo
+ao desligar a luz”; (v) Regulação Externa, “Olá usuário, eu sou o SapiEns! O sistema
+que o ajudará a economizar dinheiro e reduzir seu consumo de energia elétrica. No momento quero lembrá-lo que você esqueceu sua TV ligada. Por favor desligue-a.” e “Você
+tem que contribuir com o futuro do seu planeta por isso desligue seu equipamento ao
+sair do ambiente.”. No entanto, os brasileiros não apresentaram preferência na Falta de
+Motivação.
+A identificação dos principais gatilhos tem o objetivo de serem implementados a
+um sistema capaz de intervir no comportamento do indivíduo em uma tecnologia ubíqua.
+A resposta aos gatilhos traduz o processo de aprendizagem ubíqua, uma vez que a resposta
+positiva a esses gatilhos é a mudança de comportamento do indivíduo.
+5. Considerações Finais
+A principal contribuição deste trabalho é a proposta de uma metodologia para a modelagem de
+gatilhos que atuam na mudança de motivação do indivíduo para realizar uma atividade específica.
+Para validar o modelo, desenvolvemos um estudo de caso focado no uso lógico-racional dos recursos de energia elétrica. A identificação do perfil motivacional possibilitou a organização de
+mensagens motivacionais que, ao serem enviadas a usuários de tecnologias móveis, podem potencializar o processo de aprendizagem ubíqua que, neste trabalho, foi relacionado à educação
+ambiental.
+A metodologia para desenvolvimento do modelo de construção de gatilhos motivacionais
+foi avaliada em quatro etapas: (i) aplicação de entrevistas para avaliar as palavras e termos relacionados ao consumo de energia elétrica; (ii) desenvolvimento dos gatilhos a partir da teoria da
+autodeterminação; (iii) análise dos gatilhos feita por especialistas; (iv) aplicação dos gatilhos em
+amostra controlada. Após a validação dos especialistas, as mensagens foram enviadas para um
+grupo de indivíduos com o objetivo de avaliar, do conjunto de gatilhos, quais apresentam maiores
+justificativas motivacionais para uma possível mudança de comportamento. Essa seleção dos gatilhos tem o objetivo de serem implementados a um sistema capaz de intervir no comportamento
+do indivíduo em uma tecnologia ubíqua.
+Acreditamos que a resposta aos gatilhos traduz o processo de aprendizagem ubíqua, pelo
+fato de que a resposta positiva a esses gatilhos é a mudança de comportamento. Visamos, no
+processo final, verificar se as mediações de aprendizagem ubíqua nos processos motivacionais são
+capazes de mudar o comportamento dos indivíduos, tornando-o mais sustentável. Este processo
+de apropriação de conhecimento através da aprendizagem ubíqua caracteriza-se por ser um tipo de
+aprendizagem aberta que pode ser obtida em quaisquer ocasiões e contextos a partir do uso de uma
+376
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)
+tecnologia. Como trabalhos futuros, propõe-se: (i) desenvolver um modelo de motivação capaz
+de identificar os diferentes tipos e níveis de motivação que seja capaz de enviar mensagens para
+persuadir os indivíduos a mudarem o seu comportamento; (ii) desenvolver um sistema que utilize
+as informações contidas no discurso que seja capaz de ser utilizado na mudança de comportamento
+em processos de aprendizagem ubíqua; (ii) aplicar outros instrumentos de forma a melhor avaliar
+o perfil de motivação dos indivíduos para reduzir o consumo de energia elétrica; (iii) propor outras
+formas de avaliação do modelo proposto.
+Referências
+Arendt, C., Myers, T., and Trevathan, J. (2014). Simulating house cooling methods to decrease energy
+consumption by creating awareness and attitude change. Inter. Journal of Smart Home, 8(2):177–190.
+Banerjee, T. and Sheth, A. (2017). Iot quality control for data and application needs. IEEE Intelligent
+Systems, pages 68–73.
+Deci, E. L. (1987). Theories and paradigms, constructs and operations: Intrinsic motivation research is
+already exciting. Journal of Social Behavior and Personality, 2(2):177.
+Deci, E. L. and Ryan, R. M. (2000). The"what"and"why"of goal pursuits: Human needs and the selfdetermination of behavior. Psychological inquiry, 11(4):227–268.
+Deci, E. L. and Ryan, R. M. (2008). Self-determination theory: A macrotheory of human motivation,
+development, and health. Canadian Psychology/Psychologie canadienne, 49(3):182.
+Firssova, O., Kalz, M., Börner, D., Prinsen, F., Rusman, E., Ternier, S., and Specht, M. (2014). Mobile
+inquiry-based learning with sensor-data in the school: Effects on student motivation. In European Conference on Technology Enhanced Learning, pages 112–124. Springer.
+Fogg, B. J. (2002). Persuasive technology: using computers to change what we think and do. Ubiquity,
+2002(December):89–120.
+Gagné, M. and Deci, E. L. (2005). Self-determination theory and work moivation. Journal of Organizational behavior, 26(4):331–362.
+Guay, F., Vallerand, R. J., and Blanchard, C. (2000). On the assessment of situational intrinsic and extrinsic
+motivation: The situational motivation scale (sims). Motivation and emotion, 24(3):175–213.
+Jackson, T. (2005). Motivating sustainable consumption, a report to the sustainable development research
+network. Guilford, UK: University of Surrey. Retrieved October, 11:2007.
+Koo, C. and Chung, N. (2014). Examining the eco-technological knowledge of smart green it adoption
+behavior: A self-determination perspective. Technological forecasting and social change, 88:140–155.
+Sánchez, M., Barrena, M., Bustos, P., Campillo, C., and García, P. (2016). Arquitectura software basada en
+tecnologías smart para agricultura de precisión. Jornadas de Ingeniería del Software y Bases de Datos.
+Santaella, L. (2014a). A aprendizagem ubíqua na educação aberta. Revista Tempos e Espaços em Educação,
+pages 15–22.
+Santaella, L. (2014b). Comunicação ubíqua: repercussões na cultura e na educação. Editora Paulus.
+Shaikh, P. H., Nor, N. B. M., Nallagownden, P., Elamvazuthi, I., and Ibrahim, T. (2014). A review on
+optimized control systems for building energy and comfort management of smart sustainable buildings.
+Renewable and Sustainable Energy Reviews, 34:409–429.
+Wati, Y. and Koo, C. (2012). Toward green is adoption behaviors: A self-determination perspective. In
+System Science (HICSS), 2012 45th Hawaii International Conference on, pages 1207–1216. IEEE.
+Weiser, M. (1991). The computer for the 21st century. Scientific american, 265(3):94–104.
+377
+Anais do XXIX Simpósio Brasileiro de Informática na Educação (SBIE 2018)
+VII Congresso Brasileiro de Informática na Educação (CBIE 2018)

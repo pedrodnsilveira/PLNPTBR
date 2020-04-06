@@ -3,7 +3,7 @@
 
 from PLN import PLNPTBR
 from sklearn.feature_extraction.text import TfidfVectorizer
-from Auxiliar import FuncoesAuxiliares
+from Helpers import FuncoesAuxiliares
 
 class Similaridade():
 

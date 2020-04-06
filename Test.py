@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 from __future__ import unicode_literals
-from Auxiliar import FuncoesAuxiliares
+from Helpers import FuncoesAuxiliares
 
 #arquivo PDF para texto
 def PDFReader(PDFpath):
@@ -93,7 +93,7 @@ fa.print_corpus(fa.PDFFileKWtoCorpus('PDFFolder',10))
 '''
 
 fa = FuncoesAuxiliares()
-r = fa.PDFFileKWtoCorpus('PDFfiles',10)
+r = fa.PDFFileKWtoCorpus('PDFFolder',10)
 
 files = r[0]
 corpus = r[1]

@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import nltk
 import spacy
 nlp = spacy.load('pt_core_news_sm')
-from Auxiliar import FuncoesAuxiliares
+from Helpers import FuncoesAuxiliares
 fa = FuncoesAuxiliares()
 class PLNPTBR():
         def synonymming(self,corpus):

@@ -11,6 +11,7 @@ from Helpers import FuncoesAuxiliares
 #           nltk          #
 #         pdfminer        #
 #          pandas         #
+#         requests        #
 ###########################
 
 #Exemplo de como converter um arquivo PDF para texto

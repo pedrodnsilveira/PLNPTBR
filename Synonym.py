@@ -3,7 +3,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-from unicodedata import normalize
+#from unicodedata import normalize
 
 class MySyn():
 

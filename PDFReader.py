@@ -20,6 +20,9 @@ class MyParser(object):
         parser = PDFParser(open(pdf, 'rb'))
         document = PDFDocument(parser)
         # Try to parse the document
+        # Quebra a criptografia de arquivos pdf "travados". 
+        # Está comentado pois só funciona para Linux.
+        '''
         if not document.is_extractable:
             #print pdf
             #raise PDFTextExtractionNotAllowed
@@ -31,6 +34,7 @@ class MyParser(object):
             parser = PDFParser(open(newPDF, 'rb'))
             document = PDFDocument(parser)
             os.remove(newPDF)
+        '''
         # Create a PDF resource manager object 
         # that stores shared resources.
         rsrcmgr = PDFResourceManager()

@@ -3,7 +3,19 @@
 from __future__ import unicode_literals
 from Helpers import FuncoesAuxiliares
 
-#arquivo PDF para texto
+###########################
+# Biliotecas necessárias: #
+#      BeautifulSoup      #
+#         sklearn         #
+#          spacy          #
+#           nltk          #
+#         pdfminer        #
+#          pandas         #
+###########################
+
+#Exemplo de como converter um arquivo PDF para texto
+#Parametro: caminho para o arquivo pdf: string
+#Retorno: texto do arquivo pdf: string
 def PDFReader(PDFpath):
     from PDFReader import MyParser
 
@@ -15,13 +27,19 @@ def PDFReader(PDFpath):
 
     return pdfText
 
-#extrair sinonimos
+#Exemplo de como obter os sinônimos de uma palavra. 
+#Necessário estar conectado à internet
+#Parâmetro: palavra alvo de sinônimo: string
+#Retorno: lista com os sinônimos: Array
 def get_Synonym(word):
     from Synonym import MySyn
     S = MySyn()
     return S.get_sinonimos(word)
 
-#extrair palavras-chave
+#Exemplo de como extrair as N palavras-chave de um texto.
+#Parâmetro 1: número de palavras-chave a serem extraídas: int
+#Parâmetro 2: texto alvo da extração: string
+#Retorno: lista de palavras-chave: Array
 def Extract_KW(nKW,text):
     from KeyWordsPTBR import TextRank4Keyword
 
@@ -31,6 +49,20 @@ def Extract_KW(nKW,text):
     KW = tr4w.get_keywords(nKW)
     return KW
 
+#Exemplo de como executar algumas funções de PLN em português.
+#Parâmetro 1: conjunto de textos já tokenizados: Array bi-dimensional MxN (matriz).
+#    Sugestão que essa função seja usada em conjunto com a de extrair palavras-chave
+#    que já traz o texto tokenizado em sua maior carga semântica.
+#Parâmetro 2: Valor fixo de uma das quatro funções implementadas:
+#    "synonymming": string
+#    "lemming": string
+#    "stemming": string
+#    "singularing": string
+#Retorno: lista de palavras-chave: Array
+#OBS: Se o corpus for muito grande (por exemplo mais de 20 documentos), fica inviável
+#a utilização da função que retorna sinônimos, pois além do processamento de substi-
+#tuição dos sinônimos pelo termo (que tem complexidade quadrática O(n²)), tem o pro-
+#blema de fazer o scrap para cada token, fazendo acesso externo à internet.
 def PLNTest(corpus,funcao):
     from PLN import PLNPTBR
 
@@ -41,6 +73,14 @@ def PLNTest(corpus,funcao):
     elif funcao == 'singularing': newCorpus = pln.singularing(corpus)
     return newCorpus
 
+#Exemplo de como executar a função de encontro de similaridades entre textos.
+#Parâmetro 1: conjunto de textos já tokenizados: Array bi-dimensional MxN (matriz).
+#    Sugestão que essa função seja usada em conjunto com a de extrair palavras-chave
+#    que já traz o texto tokenizado em sua maior carga semântica.
+#Parâmetro 2: nomes dos arquivos (na mesma ordem em que eles estejam no corpus): Array
+#Parâmetro 3: impressão dos retornos, passoa-a-passo durante a execução da função: bool
+#Retorno: Não está implementado retorno explícito. Apenas a impressão da matriz de si-
+#milaridade. Isso pode ser mudado na função "get_similarity" do arquivo "Similarity.py".
 def Similarity(corpus,filesNames='',debug=True):
     from Similarity import Similaridade
     s=Similaridade()

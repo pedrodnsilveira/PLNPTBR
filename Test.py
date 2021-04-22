@@ -6,12 +6,12 @@ from Helpers import FuncoesAuxiliares
 ###########################
 # Biliotecas necessárias: #
 #      BeautifulSoup      #
+#         requests        #
 #         sklearn         #
 #          spacy          #
 #           nltk          #
 #         pdfminer        #
 #          pandas         #
-#         requests        #
 ###########################
 
 #Exemplo de como converter um arquivo PDF para texto
@@ -92,6 +92,40 @@ def Similarity(corpus,filesNames='',debug=True):
             files+=str(i)
     else: files = filesNames
     s.get_similarity(corpus,files,debug)
+
+#Exemplo de como executar o robô de busca por videos no YouTube.
+#Parâmetro 1: A chave de busca: String
+#Retorno: lista de descrições dos videos e suas respespectivas urls: Array
+#OBS: O retorno está separado por "|". Exemplo: [descricaoVideo|urlVideo]
+def YTTest(searchQuery):
+    from YouTube import YT
+
+    yt = YT()
+    videos = yt.getVideos(searchQuery)
+    return videos
+
+#Exemplo de como executar o robô de busca por artigos no ResearchGate.
+#Parâmetro 1: A chave de busca: String
+#Retorno: lista de títulos dos papers e suas respespectivas urls: Array
+#OBS: O retorno está separado por "|". Exemplo: [tituloPaper|urlPaper]
+def RGTest(searchQuery):
+    from ResearchGate import RG
+
+    rg = RG()
+    papers = yt.getPapers(searchQuery)
+    return papers
+
+#Exemplo de como executar o robô de busca por artigos no Google Scholar
+#Tem um grande problema nesta função. O google trava depois de umas duas consultas,
+#pois detecta que trata-se de uma consulta automatizada.
+#Parâmetro 1: A chave de busca: String
+#Retorno: lista de títulos dos papers e suas respespectivas urls: Array
+#OBS: O retorno está separado por "|". Exemplo: [tituloPaper|urlPaper]
+def ScholarTest(searchQuery):
+    pycommand = 'python Scholar.py -c 10 --csv --all ' + '"'+searchQuery+'"'
+    response = system_call(pycommand)
+    papers = response.split('\n')
+    return papers
 
 #print PDFReader('PDFFolder/1.pdf')
 
